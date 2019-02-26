@@ -1,0 +1,624 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */; };
+		2E35FE722217AB4D0022E096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE712217AB4D0022E096 /* ViewController.swift */; };
+		2E35FE752217AB4D0022E096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE732217AB4D0022E096 /* Main.storyboard */; };
+		2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE762217AB4D0022E096 /* CatanProbability.xcdatamodeld */; };
+		2E35FE7A2217AB4F0022E096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE792217AB4F0022E096 /* Assets.xcassets */; };
+		2E35FE7D2217AB4F0022E096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE7B2217AB4F0022E096 /* LaunchScreen.storyboard */; };
+		2E35FE882217AB4F0022E096 /* CatanProbabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE872217AB4F0022E096 /* CatanProbabilityTests.swift */; };
+		2E35FE932217AB4F0022E096 /* CatanProbabilityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE922217AB4F0022E096 /* CatanProbabilityUITests.swift */; };
+		2E35FEA22217AB8E0022E096 /* ProbabilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */; };
+		2E35FEA42217B53C0022E096 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FEA32217B53C0022E096 /* Hex.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2E35FE842217AB4F0022E096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E35FE642217AB4D0022E096 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E35FE6B2217AB4D0022E096;
+			remoteInfo = CatanProbability;
+		};
+		2E35FE8F2217AB4F0022E096 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2E35FE642217AB4D0022E096 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E35FE6B2217AB4D0022E096;
+			remoteInfo = CatanProbability;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2E35FE6C2217AB4D0022E096 /* CatanProbability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatanProbability.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2E35FE712217AB4D0022E096 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E35FE742217AB4D0022E096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2E35FE772217AB4D0022E096 /* CatanProbability.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatanProbability.xcdatamodel; sourceTree = "<group>"; };
+		2E35FE792217AB4F0022E096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2E35FE7C2217AB4F0022E096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2E35FE7E2217AB4F0022E096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E35FE832217AB4F0022E096 /* CatanProbabilityTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatanProbabilityTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E35FE872217AB4F0022E096 /* CatanProbabilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatanProbabilityTests.swift; sourceTree = "<group>"; };
+		2E35FE892217AB4F0022E096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E35FE8E2217AB4F0022E096 /* CatanProbabilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatanProbabilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E35FE922217AB4F0022E096 /* CatanProbabilityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatanProbabilityUITests.swift; sourceTree = "<group>"; };
+		2E35FE942217AB4F0022E096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityType.swift; sourceTree = "<group>"; };
+		2E35FEA32217B53C0022E096 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2E35FE692217AB4D0022E096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE802217AB4F0022E096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE8B2217AB4F0022E096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E35FE632217AB4D0022E096 = {
+			isa = PBXGroup;
+			children = (
+				2E35FE6E2217AB4D0022E096 /* CatanProbability */,
+				2E35FE862217AB4F0022E096 /* CatanProbabilityTests */,
+				2E35FE912217AB4F0022E096 /* CatanProbabilityUITests */,
+				2E35FE6D2217AB4D0022E096 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2E35FE6D2217AB4D0022E096 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FE6C2217AB4D0022E096 /* CatanProbability.app */,
+				2E35FE832217AB4F0022E096 /* CatanProbabilityTests.xctest */,
+				2E35FE8E2217AB4F0022E096 /* CatanProbabilityUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2E35FE6E2217AB4D0022E096 /* CatanProbability */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */,
+				2E35FE712217AB4D0022E096 /* ViewController.swift */,
+				2E35FE732217AB4D0022E096 /* Main.storyboard */,
+				2E35FE792217AB4F0022E096 /* Assets.xcassets */,
+				2E35FE7B2217AB4F0022E096 /* LaunchScreen.storyboard */,
+				2E35FE7E2217AB4F0022E096 /* Info.plist */,
+				2E35FEA02217AB730022E096 /* Models */,
+				2E35FE762217AB4D0022E096 /* CatanProbability.xcdatamodeld */,
+			);
+			path = CatanProbability;
+			sourceTree = "<group>";
+		};
+		2E35FE862217AB4F0022E096 /* CatanProbabilityTests */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FE872217AB4F0022E096 /* CatanProbabilityTests.swift */,
+				2E35FE892217AB4F0022E096 /* Info.plist */,
+			);
+			path = CatanProbabilityTests;
+			sourceTree = "<group>";
+		};
+		2E35FE912217AB4F0022E096 /* CatanProbabilityUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FE922217AB4F0022E096 /* CatanProbabilityUITests.swift */,
+				2E35FE942217AB4F0022E096 /* Info.plist */,
+			);
+			path = CatanProbabilityUITests;
+			sourceTree = "<group>";
+		};
+		2E35FEA02217AB730022E096 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */,
+				2E35FEA32217B53C0022E096 /* Hex.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2E35FE6B2217AB4D0022E096 /* CatanProbability */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E35FE972217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbability" */;
+			buildPhases = (
+				2E35FE682217AB4D0022E096 /* Sources */,
+				2E35FE692217AB4D0022E096 /* Frameworks */,
+				2E35FE6A2217AB4D0022E096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CatanProbability;
+			productName = CatanProbability;
+			productReference = 2E35FE6C2217AB4D0022E096 /* CatanProbability.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2E35FE822217AB4F0022E096 /* CatanProbabilityTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E35FE9A2217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbabilityTests" */;
+			buildPhases = (
+				2E35FE7F2217AB4F0022E096 /* Sources */,
+				2E35FE802217AB4F0022E096 /* Frameworks */,
+				2E35FE812217AB4F0022E096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E35FE852217AB4F0022E096 /* PBXTargetDependency */,
+			);
+			name = CatanProbabilityTests;
+			productName = CatanProbabilityTests;
+			productReference = 2E35FE832217AB4F0022E096 /* CatanProbabilityTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2E35FE8D2217AB4F0022E096 /* CatanProbabilityUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2E35FE9D2217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbabilityUITests" */;
+			buildPhases = (
+				2E35FE8A2217AB4F0022E096 /* Sources */,
+				2E35FE8B2217AB4F0022E096 /* Frameworks */,
+				2E35FE8C2217AB4F0022E096 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2E35FE902217AB4F0022E096 /* PBXTargetDependency */,
+			);
+			name = CatanProbabilityUITests;
+			productName = CatanProbabilityUITests;
+			productReference = 2E35FE8E2217AB4F0022E096 /* CatanProbabilityUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2E35FE642217AB4D0022E096 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Eric Collom";
+				TargetAttributes = {
+					2E35FE6B2217AB4D0022E096 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					2E35FE822217AB4F0022E096 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E35FE6B2217AB4D0022E096;
+					};
+					2E35FE8D2217AB4F0022E096 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 2E35FE6B2217AB4D0022E096;
+					};
+				};
+			};
+			buildConfigurationList = 2E35FE672217AB4D0022E096 /* Build configuration list for PBXProject "CatanProbability" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2E35FE632217AB4D0022E096;
+			productRefGroup = 2E35FE6D2217AB4D0022E096 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2E35FE6B2217AB4D0022E096 /* CatanProbability */,
+				2E35FE822217AB4F0022E096 /* CatanProbabilityTests */,
+				2E35FE8D2217AB4F0022E096 /* CatanProbabilityUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2E35FE6A2217AB4D0022E096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E35FE7D2217AB4F0022E096 /* LaunchScreen.storyboard in Resources */,
+				2E35FE7A2217AB4F0022E096 /* Assets.xcassets in Resources */,
+				2E35FE752217AB4D0022E096 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE812217AB4F0022E096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE8C2217AB4F0022E096 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2E35FE682217AB4D0022E096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */,
+				2E35FEA42217B53C0022E096 /* Hex.swift in Sources */,
+				2E35FE722217AB4D0022E096 /* ViewController.swift in Sources */,
+				2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */,
+				2E35FEA22217AB8E0022E096 /* ProbabilityType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE7F2217AB4F0022E096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E35FE882217AB4F0022E096 /* CatanProbabilityTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E35FE8A2217AB4F0022E096 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2E35FE932217AB4F0022E096 /* CatanProbabilityUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2E35FE852217AB4F0022E096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E35FE6B2217AB4D0022E096 /* CatanProbability */;
+			targetProxy = 2E35FE842217AB4F0022E096 /* PBXContainerItemProxy */;
+		};
+		2E35FE902217AB4F0022E096 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E35FE6B2217AB4D0022E096 /* CatanProbability */;
+			targetProxy = 2E35FE8F2217AB4F0022E096 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2E35FE732217AB4D0022E096 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E35FE742217AB4D0022E096 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		2E35FE7B2217AB4F0022E096 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2E35FE7C2217AB4F0022E096 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E35FE952217AB4F0022E096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2E35FE962217AB4F0022E096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2E35FE982217AB4F0022E096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2E35FE992217AB4F0022E096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbability/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbability;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		2E35FE9B2217AB4F0022E096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbabilityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatanProbability.app/CatanProbability";
+			};
+			name = Debug;
+		};
+		2E35FE9C2217AB4F0022E096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbabilityTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbabilityTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CatanProbability.app/CatanProbability";
+			};
+			name = Release;
+		};
+		2E35FE9E2217AB4F0022E096 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbabilityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbabilityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatanProbability;
+			};
+			name = Debug;
+		};
+		2E35FE9F2217AB4F0022E096 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TMTETVW362;
+				INFOPLIST_FILE = CatanProbabilityUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbabilityUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CatanProbability;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2E35FE672217AB4D0022E096 /* Build configuration list for PBXProject "CatanProbability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E35FE952217AB4F0022E096 /* Debug */,
+				2E35FE962217AB4F0022E096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E35FE972217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbability" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E35FE982217AB4F0022E096 /* Debug */,
+				2E35FE992217AB4F0022E096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E35FE9A2217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbabilityTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E35FE9B2217AB4F0022E096 /* Debug */,
+				2E35FE9C2217AB4F0022E096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2E35FE9D2217AB4F0022E096 /* Build configuration list for PBXNativeTarget "CatanProbabilityUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E35FE9E2217AB4F0022E096 /* Debug */,
+				2E35FE9F2217AB4F0022E096 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2E35FE762217AB4D0022E096 /* CatanProbability.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2E35FE772217AB4D0022E096 /* CatanProbability.xcdatamodel */,
+			);
+			currentVersion = 2E35FE772217AB4D0022E096 /* CatanProbability.xcdatamodel */;
+			path = CatanProbability.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2E35FE642217AB4D0022E096 /* Project object */;
+}
