@@ -8,7 +8,7 @@
 
 import UIKit
 
-enum ResorceType:String {
+enum ResourceType:String {
     
     case forest = "Forest",
          grain = "Grain",
