@@ -13,8 +13,14 @@ class HexButton: UIButton {
     var icon:UIImageView!
     var probability:UILabel!
     
+    class var size: CGSize {
+        get {
+            return CGSize(width: 130, height: 151)
+        }
+    }
+    
     convenience init() {
-        let frame = CGRect(origin: .zero, size: CGSize(width: 130, height: 151))
+        let frame = CGRect(origin: .zero, size: HexButton.size)
         self.init(frame: frame)
 
         icon = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 60, height: 60)))
@@ -30,5 +36,7 @@ class HexButton: UIButton {
         self.addSubview(icon)
         self.addSubview(probability)
     }
+    
+
     
 }

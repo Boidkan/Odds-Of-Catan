@@ -27,20 +27,36 @@ class ProbabilityView: UIView {
         self.backgroundColor = UIColor.white
         self.layer.cornerRadius = 5
         
-        woodButton.center = CGPoint(x: 40 + 65, y: 90 + 75)
-        brickButton.center = CGPoint(x: 40 + 130 + 8 + 65, y: 90 + 75)
-        grainButton.center = CGPoint(x: 40 + 130 + 4, y: 90 + 150 - 32 + 75)
-        oreButton.center = CGPoint(x: 40 + 65, y: 90 + 150 + 85 + 75)
-        woolButton.center = CGPoint(x: 40 + 130 + 8 + 65, y: 90 + 150 + 85 + 75)
+        let hexSize = HexButton.size
         
-        add = UIButton(frame: CGRect(x: frame.width - (45 + 55), y: 90 + 150 - 32 + 75 - 37.5, width:  55, height: 75))
+        let horizontalExtraSpace = frame.width - (hexSize.width * 2)
+        let horizontalHexSpacing: CGFloat = 7
+        
+        let sidePadding = (horizontalExtraSpace - horizontalHexSpacing) / 2
+        let sidePaddingFromHexCenter = sidePadding + (hexSize.width / 2)
+        
+        let verticalExtraSpace = frame.height - (hexSize.height * 2) - 76
+        
+        let paddingTopFromHexCenter = ((verticalExtraSpace - 8) / 2) + (hexSize.height / 2)
+        
+        woodButton.center = CGPoint(x: sidePaddingFromHexCenter , y: paddingTopFromHexCenter)
+        brickButton.center = CGPoint(x: frame.width - sidePaddingFromHexCenter, y: paddingTopFromHexCenter)
+        
+        let center = CGPoint(x: frame.width/2, y: frame.height/2)
+        grainButton.center = center
+        
+        oreButton.center = CGPoint(x: sidePaddingFromHexCenter, y: frame.height - paddingTopFromHexCenter)
+        
+        woolButton.center = CGPoint(x: frame.width - sidePaddingFromHexCenter, y: frame.height - paddingTopFromHexCenter)
+        
+        add = UIButton(frame: CGRect(x: frame.width - (sidePadding + 55), y: center.y - (75 / 2), width:  55, height: 75))
         
         add.imageView?.contentMode = .scaleAspectFit
         let plus = UIImage(named: "Plus")
         add.setImage(plus , for: .normal)
         
         
-        remove = UIButton(frame: CGRect(x: 45, y: 90 + 150 - 32 + 75 - 37.5, width: 55, height: 75))
+        remove = UIButton(frame: CGRect(x: sidePadding, y: center.y - (75 / 2), width: 55, height: 75))
         
         remove.imageView?.contentMode = .scaleAspectFit
         let minus = UIImage(named: "Minus")
