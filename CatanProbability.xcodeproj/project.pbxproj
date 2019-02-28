@@ -8,15 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */; };
-		2E35FE722217AB4D0022E096 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE712217AB4D0022E096 /* ViewController.swift */; };
+		2E35FE722217AB4D0022E096 /* ProbabilityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE712217AB4D0022E096 /* ProbabilityVC.swift */; };
 		2E35FE752217AB4D0022E096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE732217AB4D0022E096 /* Main.storyboard */; };
 		2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE762217AB4D0022E096 /* CatanProbability.xcdatamodeld */; };
 		2E35FE7A2217AB4F0022E096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE792217AB4F0022E096 /* Assets.xcassets */; };
 		2E35FE7D2217AB4F0022E096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE7B2217AB4F0022E096 /* LaunchScreen.storyboard */; };
 		2E35FE882217AB4F0022E096 /* CatanProbabilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE872217AB4F0022E096 /* CatanProbabilityTests.swift */; };
 		2E35FE932217AB4F0022E096 /* CatanProbabilityUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE922217AB4F0022E096 /* CatanProbabilityUITests.swift */; };
-		2E35FEA22217AB8E0022E096 /* ProbabilityType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */; };
 		2E35FEA42217B53C0022E096 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FEA32217B53C0022E096 /* Hex.swift */; };
+		2E5428652225FAA200E352C5 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5428642225FAA200E352C5 /* HexButton.swift */; };
+		2E5428672226009600E352C5 /* ProbabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5428662226009600E352C5 /* ProbabilityView.swift */; };
+		2E54286922260AC400E352C5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286822260AC400E352C5 /* Header.swift */; };
+		2E54286B222785E400E352C5 /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286A222785E400E352C5 /* ResourceType.swift */; };
+		2E54286D2227860400E352C5 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286C2227860400E352C5 /* Number.swift */; };
+		2E54287022278A4B00E352C5 /* ProbabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286F22278A4B00E352C5 /* ProbabilityViewModel.swift */; };
+		2E54287322278E7500E352C5 /* Wood.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287222278E7500E352C5 /* Wood.swift */; };
+		2E54287522278E8900E352C5 /* Ore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287422278E8900E352C5 /* Ore.swift */; };
+		2E54287722278E9A00E352C5 /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287622278E9A00E352C5 /* Brick.swift */; };
+		2E54287922278EAA00E352C5 /* Grain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287822278EAA00E352C5 /* Grain.swift */; };
+		2E54287B22278EC400E352C5 /* Wool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287A22278EC400E352C5 /* Wool.swift */; };
+		2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287E2227ABD100E352C5 /* Formatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +50,7 @@
 /* Begin PBXFileReference section */
 		2E35FE6C2217AB4D0022E096 /* CatanProbability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatanProbability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E35FE712217AB4D0022E096 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E35FE712217AB4D0022E096 /* ProbabilityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityVC.swift; sourceTree = "<group>"; };
 		2E35FE742217AB4D0022E096 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E35FE772217AB4D0022E096 /* CatanProbability.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CatanProbability.xcdatamodel; sourceTree = "<group>"; };
 		2E35FE792217AB4F0022E096 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,8 +62,19 @@
 		2E35FE8E2217AB4F0022E096 /* CatanProbabilityUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatanProbabilityUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E35FE922217AB4F0022E096 /* CatanProbabilityUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatanProbabilityUITests.swift; sourceTree = "<group>"; };
 		2E35FE942217AB4F0022E096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityType.swift; sourceTree = "<group>"; };
 		2E35FEA32217B53C0022E096 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
+		2E5428642225FAA200E352C5 /* HexButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexButton.swift; sourceTree = "<group>"; };
+		2E5428662226009600E352C5 /* ProbabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityView.swift; sourceTree = "<group>"; };
+		2E54286822260AC400E352C5 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2E54286A222785E400E352C5 /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
+		2E54286C2227860400E352C5 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
+		2E54286F22278A4B00E352C5 /* ProbabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityViewModel.swift; sourceTree = "<group>"; };
+		2E54287222278E7500E352C5 /* Wood.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wood.swift; sourceTree = "<group>"; };
+		2E54287422278E8900E352C5 /* Ore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ore.swift; sourceTree = "<group>"; };
+		2E54287622278E9A00E352C5 /* Brick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
+		2E54287822278EAA00E352C5 /* Grain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grain.swift; sourceTree = "<group>"; };
+		2E54287A22278EC400E352C5 /* Wool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wool.swift; sourceTree = "<group>"; };
+		2E54287E2227ABD100E352C5 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,12 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */,
-				2E35FE712217AB4D0022E096 /* ViewController.swift */,
 				2E35FE732217AB4D0022E096 /* Main.storyboard */,
 				2E35FE792217AB4F0022E096 /* Assets.xcassets */,
 				2E35FE7B2217AB4F0022E096 /* LaunchScreen.storyboard */,
 				2E35FE7E2217AB4F0022E096 /* Info.plist */,
+				2E5428622225F9F900E352C5 /* View Controllers */,
+				2E5428632225FA6B00E352C5 /* Views */,
+				2E54286E2227896C00E352C5 /* View Models */,
 				2E35FEA02217AB730022E096 /* Models */,
+				2E54287D2227ABBA00E352C5 /* Helpers */,
 				2E35FE762217AB4D0022E096 /* CatanProbability.xcdatamodeld */,
 			);
 			path = CatanProbability;
@@ -136,10 +161,58 @@
 		2E35FEA02217AB730022E096 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				2E35FEA12217AB8E0022E096 /* ProbabilityType.swift */,
-				2E35FEA32217B53C0022E096 /* Hex.swift */,
+				2E54287122278E6800E352C5 /* Hexes */,
+				2E54286C2227860400E352C5 /* Number.swift */,
+				2E54286A222785E400E352C5 /* ResourceType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2E5428622225F9F900E352C5 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FE712217AB4D0022E096 /* ProbabilityVC.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		2E5428632225FA6B00E352C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2E5428642225FAA200E352C5 /* HexButton.swift */,
+				2E5428662226009600E352C5 /* ProbabilityView.swift */,
+				2E54286822260AC400E352C5 /* Header.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2E54286E2227896C00E352C5 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				2E54286F22278A4B00E352C5 /* ProbabilityViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		2E54287122278E6800E352C5 /* Hexes */ = {
+			isa = PBXGroup;
+			children = (
+				2E35FEA32217B53C0022E096 /* Hex.swift */,
+				2E54287222278E7500E352C5 /* Wood.swift */,
+				2E54287422278E8900E352C5 /* Ore.swift */,
+				2E54287622278E9A00E352C5 /* Brick.swift */,
+				2E54287A22278EC400E352C5 /* Wool.swift */,
+				2E54287822278EAA00E352C5 /* Grain.swift */,
+			);
+			path = Hexes;
+			sourceTree = "<group>";
+		};
+		2E54287D2227ABBA00E352C5 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E54287E2227ABD100E352C5 /* Formatters.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,11 +346,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E54286922260AC400E352C5 /* Header.swift in Sources */,
+				2E5428652225FAA200E352C5 /* HexButton.swift in Sources */,
+				2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */,
+				2E54287522278E8900E352C5 /* Ore.swift in Sources */,
+				2E54287B22278EC400E352C5 /* Wool.swift in Sources */,
+				2E54286D2227860400E352C5 /* Number.swift in Sources */,
 				2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */,
 				2E35FEA42217B53C0022E096 /* Hex.swift in Sources */,
-				2E35FE722217AB4D0022E096 /* ViewController.swift in Sources */,
+				2E35FE722217AB4D0022E096 /* ProbabilityVC.swift in Sources */,
 				2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */,
-				2E35FEA22217AB8E0022E096 /* ProbabilityType.swift in Sources */,
+				2E5428672226009600E352C5 /* ProbabilityView.swift in Sources */,
+				2E54287722278E9A00E352C5 /* Brick.swift in Sources */,
+				2E54287022278A4B00E352C5 /* ProbabilityViewModel.swift in Sources */,
+				2E54286B222785E400E352C5 /* ResourceType.swift in Sources */,
+				2E54287322278E7500E352C5 /* Wood.swift in Sources */,
+				2E54287922278EAA00E352C5 /* Grain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -455,6 +539,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMTETVW362;
 				INFOPLIST_FILE = CatanProbability/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -462,7 +547,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -473,6 +558,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TMTETVW362;
 				INFOPLIST_FILE = CatanProbability/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -480,7 +566,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = EricCollom.CatanProbability;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
