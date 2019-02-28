@@ -33,12 +33,19 @@ class ProbabilityView: UIView {
         oreButton.center = CGPoint(x: 40 + 65, y: 90 + 150 + 85 + 75)
         woolButton.center = CGPoint(x: 40 + 130 + 8 + 65, y: 90 + 150 + 85 + 75)
         
-        add = UIButton(frame: CGRect(x: frame.width - (45 + 55), y: 90 + 150 - 32 + 75 - 27.5, width: 55, height: 55))
+        add = UIButton(frame: CGRect(x: frame.width - (45 + 55), y: 90 + 150 - 32 + 75 - 37.5, width:  55, height: 75))
         
-        add.setBackgroundImage(UIImage(named: "Plus"), for: .normal)
+        add.imageView?.contentMode = .scaleAspectFit
+        let plus = UIImage(named: "Plus")
+        add.setImage(plus , for: .normal)
         
-        remove = UIButton(frame: CGRect(x: 45, y: 90 + 150 - 32 + 75 - 3.5, width: 55, height: 7))
-        remove.setBackgroundImage(UIImage(named: "Minus"), for: .normal)
+        
+        remove = UIButton(frame: CGRect(x: 45, y: 90 + 150 - 32 + 75 - 37.5, width: 55, height: 75))
+        
+        remove.imageView?.contentMode = .scaleAspectFit
+        let minus = UIImage(named: "Minus")
+        remove.setImage(minus, for: .normal)
+        
         
         
         self.addSubview(woodButton)
