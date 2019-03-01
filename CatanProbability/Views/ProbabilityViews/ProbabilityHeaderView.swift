@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProbabilityHeaderView: UIView {
+class ProbabilityHeaderView: HeaderView {
     
     private(set) var diceIcon:UIImageView!
     private(set) var cardsIcon:UIImageView!
@@ -19,12 +19,10 @@ class ProbabilityHeaderView: UIView {
     private(set) var cardAverage:UILabel!
     private(set) var cardAverageDetail:UILabel!
     
-    convenience init() {
+    override func setup() {
         let width = UIScreen.main.bounds.width
         let height = UIScreen.main.bounds.height * 2 / 5
         let size = CGSize(width: width, height: height)
-        
-        self.init(frame: CGRect(origin: .zero, size: size))
         
         var cardsX:CGFloat = (width / 2) + 20
         var diceX:CGFloat = 20
@@ -75,7 +73,6 @@ class ProbabilityHeaderView: UIView {
         self.addSubview(diceProbability)
         self.addSubview(diceDetail)
         
-        self.backgroundColor = UIColor(red: 190/255, green: 35/255, blue: 52/255, alpha: 1)
     }
     
     func setDiceProbability(text:String) {

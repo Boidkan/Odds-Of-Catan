@@ -8,24 +8,20 @@
 
 import UIKit
 
-class ProbabilityView: UIView {
-
+class ProbabilityView: ContentView {
+    
     var woodButton: HexButton = HexButton()
     var oreButton: HexButton = HexButton()
     var brickButton: HexButton = HexButton()
     var woolButton: HexButton = HexButton()
     var grainButton: HexButton = HexButton()
+    
     var add:UIButton!
     var remove:UIButton!
     
     private var paddingTop = 90
     
-    convenience init() {
-        let bounds = UIScreen.main.bounds
-        let frame = CGRect(x: 10, y: 180, width: bounds.width - 20, height: bounds.height -  200)
-        self.init(frame: frame)
-        self.backgroundColor = UIColor.white
-        self.layer.cornerRadius = 5
+    override func setup() {
         
         let hexSize = HexButton.size
         

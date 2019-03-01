@@ -11,7 +11,7 @@ import UIKit
 class ProbabilityVC: UIViewController {
     
     var probabilityViewModel = ProbabilityViewModel()
-    var probabilityView = ProbabilityView()
+    var contentView = ProbabilityView()
     var header = ProbabilityHeaderView()
 
     override func viewDidLoad() {
@@ -20,10 +20,10 @@ class ProbabilityVC: UIViewController {
         self.view.backgroundColor = UIColor.lightGray
         
         probabilityViewModel.configure(view: header)
-        probabilityViewModel.configure(view: probabilityView)
+        probabilityViewModel.configure(view: contentView)
         
         self.view.addSubview(header)
-        self.view.addSubview(probabilityView)
+        self.view.addSubview(contentView)
         
     }
 

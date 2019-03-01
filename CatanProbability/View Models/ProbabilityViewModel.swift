@@ -65,11 +65,11 @@ extension ProbabilityViewModel {
         view.woodButton.setImage(background(for: .wood), for: .normal)
         view.woolButton.setImage(background(for: .wool), for: .normal)
         
-        view.brickButton.probability.text = bricks.probability
-        view.oreButton.probability.text = ores.probability
-        view.grainButton.probability.text = grains.probability
-        view.woodButton.probability.text = wood.probability
-        view.woolButton.probability.text = wool.probability
+        view.brickButton.probability?.text = bricks.probability
+        view.oreButton.probability?.text = ores.probability
+        view.grainButton.probability?.text = grains.probability
+        view.woodButton.probability?.text = wood.probability
+        view.woolButton.probability?.text = wool.probability
         
     }
     
