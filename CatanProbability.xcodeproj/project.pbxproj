@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E25F0FF2229AB8100CA3503 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E25F0FE2229AB8100CA3503 /* StringExtension.swift */; };
 		2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */; };
 		2E35FE722217AB4D0022E096 /* ProbabilityVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FE712217AB4D0022E096 /* ProbabilityVC.swift */; };
 		2E35FE752217AB4D0022E096 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E35FE732217AB4D0022E096 /* Main.storyboard */; };
@@ -18,7 +19,7 @@
 		2E35FEA42217B53C0022E096 /* Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E35FEA32217B53C0022E096 /* Hex.swift */; };
 		2E5428652225FAA200E352C5 /* HexButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5428642225FAA200E352C5 /* HexButton.swift */; };
 		2E5428672226009600E352C5 /* ProbabilityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5428662226009600E352C5 /* ProbabilityView.swift */; };
-		2E54286922260AC400E352C5 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286822260AC400E352C5 /* Header.swift */; };
+		2E54286922260AC400E352C5 /* ProbabilityHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286822260AC400E352C5 /* ProbabilityHeaderView.swift */; };
 		2E54286B222785E400E352C5 /* ResourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286A222785E400E352C5 /* ResourceType.swift */; };
 		2E54286D2227860400E352C5 /* Number.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286C2227860400E352C5 /* Number.swift */; };
 		2E54287022278A4B00E352C5 /* ProbabilityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54286F22278A4B00E352C5 /* ProbabilityViewModel.swift */; };
@@ -48,6 +49,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E25F0FE2229AB8100CA3503 /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		2E35FE6C2217AB4D0022E096 /* CatanProbability.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatanProbability.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E35FE6F2217AB4D0022E096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E35FE712217AB4D0022E096 /* ProbabilityVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityVC.swift; sourceTree = "<group>"; };
@@ -65,7 +67,7 @@
 		2E35FEA32217B53C0022E096 /* Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hex.swift; sourceTree = "<group>"; };
 		2E5428642225FAA200E352C5 /* HexButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexButton.swift; sourceTree = "<group>"; };
 		2E5428662226009600E352C5 /* ProbabilityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityView.swift; sourceTree = "<group>"; };
-		2E54286822260AC400E352C5 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		2E54286822260AC400E352C5 /* ProbabilityHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityHeaderView.swift; sourceTree = "<group>"; };
 		2E54286A222785E400E352C5 /* ResourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResourceType.swift; sourceTree = "<group>"; };
 		2E54286C2227860400E352C5 /* Number.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Number.swift; sourceTree = "<group>"; };
 		2E54286F22278A4B00E352C5 /* ProbabilityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProbabilityViewModel.swift; sourceTree = "<group>"; };
@@ -181,7 +183,7 @@
 			children = (
 				2E5428642225FAA200E352C5 /* HexButton.swift */,
 				2E5428662226009600E352C5 /* ProbabilityView.swift */,
-				2E54286822260AC400E352C5 /* Header.swift */,
+				2E54286822260AC400E352C5 /* ProbabilityHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				2E54287E2227ABD100E352C5 /* Formatters.swift */,
+				2E25F0FE2229AB8100CA3503 /* StringExtension.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -346,7 +349,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E54286922260AC400E352C5 /* Header.swift in Sources */,
+				2E54286922260AC400E352C5 /* ProbabilityHeaderView.swift in Sources */,
 				2E5428652225FAA200E352C5 /* HexButton.swift in Sources */,
 				2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */,
 				2E54287522278E8900E352C5 /* Ore.swift in Sources */,
@@ -354,6 +357,7 @@
 				2E54286D2227860400E352C5 /* Number.swift in Sources */,
 				2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */,
 				2E35FEA42217B53C0022E096 /* Hex.swift in Sources */,
+				2E25F0FF2229AB8100CA3503 /* StringExtension.swift in Sources */,
 				2E35FE722217AB4D0022E096 /* ProbabilityVC.swift in Sources */,
 				2E35FE702217AB4D0022E096 /* AppDelegate.swift in Sources */,
 				2E5428672226009600E352C5 /* ProbabilityView.swift in Sources */,

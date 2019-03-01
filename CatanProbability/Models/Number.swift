@@ -18,7 +18,7 @@ enum Number: Int {
         }
     }
     
-    private var combinations: CGFloat {
+    var combinations: CGFloat {
         get {
             switch self {
             case .two, .twelve:
@@ -37,3 +37,5 @@ enum Number: Int {
         }
     }
 }
+
+

@@ -30,12 +30,15 @@ extension Sequence where Iterator.Element: Hex {
         var seen: [Int: Bool] = [:]
         return self.filter { seen.updateValue(true, forKey: $0.number.rawValue) == nil }
     }
+
     
     var probability: String {
         let uniqueValues = self.unique()
         let probability = uniqueValues.reduce(0) { $0 + $1.number.probability } as NSNumber
         return (Formatters.shared.decimalFormatter.string(from: probability) ?? "0") + "%"
     }
+    
+
 }
 
 

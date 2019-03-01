@@ -12,7 +12,7 @@ class ProbabilityVC: UIViewController {
     
     var probabilityViewModel = ProbabilityViewModel()
     var probabilityView = ProbabilityView()
-    var header = Header()
+    var header = ProbabilityHeaderView()
 
     override func viewDidLoad() {
         
@@ -27,6 +27,8 @@ class ProbabilityVC: UIViewController {
         
     }
 
-
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 }
 

@@ -16,7 +16,17 @@ class ProbabilityViewModel {
     var grains: [Grain] = []
     var wool: [Wool] = []
     
-    var totalProbability: CGFloat {
+    var averageCardsDrawnPerTurn: CGFloat {
+        let numerator = wood.reduce(0) { $0 + $1.number.combinations } +
+                        ores.reduce(0) { $0 + $1.number.combinations } +
+                        bricks.reduce(0) { $0 + $1.number.combinations } +
+                        grains.reduce(0) { $0 + $1.number.combinations } +
+                        wool.reduce(0) { $0 + $1.number.combinations }
+    
+        return numerator/36
+    }
+    
+    var diceProbability: CGFloat {
         var seen: [Number] = []
         
         wood.collectUniqueNumbers(seen: &seen)
@@ -35,6 +45,7 @@ class ProbabilityViewModel {
     func background(for type: ResourceType) -> UIImage? {
         return UIImage(named: type.rawValue + "Hex")
     }
+    
 }
 
 extension ProbabilityViewModel {
@@ -62,8 +73,12 @@ extension ProbabilityViewModel {
         
     }
     
-    func configure(view: Header) {
-        view.label.text = "\(totalProbability)%"
-        view.detailLabel.text = "Chance of getting a card"
+    func configure(view: ProbabilityHeaderView) {
+
+        view.setDiceProbability(text: "\(diceProbability)")
+        view.diceDetail.text = "chance of getting a number"
+        
+        view.setCardAverage(text: "\(averageCardsDrawnPerTurn)")
+        view.cardAverageDetail.text = "cards on average per turn"
     }
 }
