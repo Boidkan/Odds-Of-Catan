@@ -21,7 +21,7 @@ class HeaderView: UIView, Header {
         
         self.init(frame: CGRect(origin: .zero, size: size))
         
-        self.backgroundColor = UIColor(red: 190/255, green: 35/255, blue: 52/255, alpha: 1)
+        self.backgroundColor = ColorPalette.shared.red
         setup()
     }
     

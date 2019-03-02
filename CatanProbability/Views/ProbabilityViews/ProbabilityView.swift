@@ -10,11 +10,11 @@ import UIKit
 
 class ProbabilityView: ContentView {
     
-    var woodButton: HexButton = HexButton()
-    var oreButton: HexButton = HexButton()
-    var brickButton: HexButton = HexButton()
-    var woolButton: HexButton = HexButton()
-    var grainButton: HexButton = HexButton()
+    var woodButton = HexButton(type: .wood)
+    var oreButton = HexButton(type: .ore)
+    var brickButton = HexButton(type: .brick)
+    var woolButton = HexButton(type: .wool)
+    var grainButton = HexButton(type: .grain)
     
     var add:UIButton!
     var remove:UIButton!

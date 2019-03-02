@@ -16,4 +16,12 @@ enum ResourceType:String {
     ore = "Ore",
     wool = "Wool"
     
+    var icon: UIImage? {
+        return UIImage(named: self.rawValue)
+    }
+    
+    var background: UIImage? {
+        return UIImage(named: self.rawValue + "Hex")
+    }
+    
 }

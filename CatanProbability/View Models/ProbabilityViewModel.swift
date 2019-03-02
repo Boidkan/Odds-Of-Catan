@@ -38,32 +38,25 @@ class ProbabilityViewModel {
         return seen.reduce(0) { $0 + $1.probability }
     }
     
-    func icon(for type: ResourceType) -> UIImage? {
-        return UIImage(named: type.rawValue)
-    }
-    
-    func background(for type: ResourceType) -> UIImage? {
-        return UIImage(named: type.rawValue + "Hex")
-    }
-    
 }
 
 extension ProbabilityViewModel {
     
+    func add(hex: Hex) {
+        if hex is Wood {
+            wood.append(hex as! Wood)
+        }else if hex is Ore {
+            ores.append(hex as! Ore)
+        }else if hex is Wool {
+            wool.append(hex as! Wool)
+        }else if hex is Grain {
+            grains.append(hex as! Grain)
+        }else if hex is Brick {
+            bricks.append(hex as! Brick)
+        }
+    }
+    
     func configure(view: ProbabilityView) {
-        
-        view.brickButton.icon.image = icon(for: .brick)
-        view.oreButton.icon.image = icon(for: .ore)
-        view.grainButton.icon.image = icon(for: .grain)
-        view.woodButton.icon.image = icon(for: .wood)
-        view.woolButton.icon.image = icon(for: .wool)
-        
-        
-        view.brickButton.setImage(background(for: .brick), for: .normal)
-        view.oreButton.setImage(background(for: .ore), for: .normal)
-        view.grainButton.setImage(background(for: .grain), for: .normal)
-        view.woodButton.setImage(background(for: .wood), for: .normal)
-        view.woolButton.setImage(background(for: .wool), for: .normal)
         
         view.brickButton.probability?.text = bricks.probability
         view.oreButton.probability?.text = ores.probability
@@ -80,5 +73,6 @@ extension ProbabilityViewModel {
         
         view.setCardAverage(text: "\(averageCardsDrawnPerTurn)")
         view.cardAverageDetail.text = "cards on average per turn"
+        
     }
 }

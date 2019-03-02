@@ -22,6 +22,8 @@ class ProbabilityVC: UIViewController {
         probabilityViewModel.configure(view: header)
         probabilityViewModel.configure(view: contentView)
         
+        contentView.add.addTarget(self, action: #selector(addHex), for: .touchUpInside)
+        
         self.view.addSubview(header)
         self.view.addSubview(contentView)
         
@@ -29,6 +31,16 @@ class ProbabilityVC: UIViewController {
 
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
+    }
+    
+    @objc func addHex() {
+        self.performSegue(withIdentifier: "addHex", sender: nil)
+    }
+    
+    func add(hex: Hex) {
+        probabilityViewModel.add(hex: hex)
+        probabilityViewModel.configure(view: contentView)
+        probabilityViewModel.configure(view: header)
     }
 }
 

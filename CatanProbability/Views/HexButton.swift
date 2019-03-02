@@ -12,6 +12,7 @@ class HexButton: UIButton {
     
     var icon:UIImageView!
     var probability:UILabel?
+    var type:ResourceType?
     
     class var size: CGSize {
         get {
@@ -20,8 +21,14 @@ class HexButton: UIButton {
         }
     }
     
-    convenience init() {
+    convenience init(type:ResourceType, iconOnly: Bool) {
+        self.init(iconOnly: iconOnly)
+        set(type: type)
+    }
+    
+    convenience init(type:ResourceType) {
         self.init(iconOnly: false)
+        set(type: type)
     }
     
     convenience init(iconOnly: Bool) {
@@ -44,9 +51,12 @@ class HexButton: UIButton {
         
         icon.contentMode = .scaleAspectFit
         self.addSubview(icon)
-        
     }
     
-    
+    func set(type: ResourceType) {
+        self.type = type
+        self.icon.image = type.icon
+        self.setImage(type.background, for: .normal)
+    }
     
 }

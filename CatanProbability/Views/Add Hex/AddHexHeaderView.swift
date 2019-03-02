@@ -14,12 +14,15 @@ class AddHexHeaderView: HeaderView {
     
     override func setup() {
         
-        let frame = CGRect(x: 20, y: 70, width: self.bounds.width - 40, height: 50)
+        let frame = CGRect(x: 20, y: 70, width: self.bounds.width - 40, height: 90)
         instructions = UILabel(frame: frame)
         instructions.textColor = .white
         instructions.textAlignment = .center
         instructions.font = UIFont.systemFont(ofSize: 36, weight: .light)
+        instructions.numberOfLines = 0
+        instructions.lineBreakMode = .byWordWrapping
         
+        self.addSubview(instructions)
     }
     
     

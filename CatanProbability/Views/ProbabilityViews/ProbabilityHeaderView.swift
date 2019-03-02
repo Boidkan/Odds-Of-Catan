@@ -20,9 +20,8 @@ class ProbabilityHeaderView: HeaderView {
     private(set) var cardAverageDetail:UILabel!
     
     override func setup() {
-        let width = UIScreen.main.bounds.width
-        let height = UIScreen.main.bounds.height * 2 / 5
-        let size = CGSize(width: width, height: height)
+        
+        let width = self.bounds.width
         
         var cardsX:CGFloat = (width / 2) + 20
         var diceX:CGFloat = 20
@@ -79,7 +78,7 @@ class ProbabilityHeaderView: HeaderView {
         let textSize = text.size(diceProbability.font)
         let iconWidth = diceIcon.bounds.width
         
-        let horizontalSpace = (self.bounds.width/2) - 40
+        let horizontalSpace = (UIScreen.main.bounds.width / 2) - 40
         
         let padding = (horizontalSpace - (iconWidth + textSize.width + 5)) / 2
         
@@ -94,7 +93,7 @@ class ProbabilityHeaderView: HeaderView {
         
         let horizontalSpace = (self.bounds.width/2) - 40
         
-        let x = (self.bounds.width/2) + 20
+        let x = (UIScreen.main.bounds.width / 2) + 20
         
         let padding = (horizontalSpace - (iconWidth + textSize.width + 5)) / 2
         

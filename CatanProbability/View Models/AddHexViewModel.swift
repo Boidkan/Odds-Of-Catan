@@ -10,6 +10,17 @@ import Foundation
 
 class AddHexViewModel {
     
+    
+    
+    
+}
+
+extension AddHexViewModel {
+    
     func configure(view: AddHexView) {}
-    func configure(view: AddHexHeaderView) {}
+    func configure(view: SelectDiceValueView) {}
+    
+    func configure(view: AddHexHeaderView) {
+        view.instructions.text = "Select a resource to add."
+    }
 }

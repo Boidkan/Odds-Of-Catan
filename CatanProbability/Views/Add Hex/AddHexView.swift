@@ -8,14 +8,43 @@
 
 import UIKit
 
-class AddHexView: UIView {
+class AddHexView: ContentView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    var woodButton = HexButton(type: .wood, iconOnly: true)
+    var oreButton = HexButton(type: .ore, iconOnly: true)
+    var brickButton = HexButton(type: .brick, iconOnly: true)
+    var woolButton = HexButton(type: .wool, iconOnly: true)
+    var grainButton = HexButton(type: .grain, iconOnly: true)
+    
+    override func setup() {
+        
+        let hexSize = HexButton.size
+        
+        let horizontalExtraSpace = frame.width - (hexSize.width * 2)
+        let horizontalHexSpacing: CGFloat = 7
+        
+        let sidePadding = (horizontalExtraSpace - horizontalHexSpacing) / 2
+        let sidePaddingFromHexCenter = sidePadding + (hexSize.width / 2)
+        
+        let verticalExtraSpace = frame.height - (hexSize.height * 2) - 76
+        
+        let paddingTopFromHexCenter = ((verticalExtraSpace - 8) / 2) + (hexSize.height / 2)
+        
+        woodButton.center = CGPoint(x: sidePaddingFromHexCenter , y: paddingTopFromHexCenter)
+        brickButton.center = CGPoint(x: frame.width - sidePaddingFromHexCenter, y: paddingTopFromHexCenter)
+        
+        let center = CGPoint(x: frame.width/2, y: frame.height/2)
+        grainButton.center = center
+        
+        oreButton.center = CGPoint(x: sidePaddingFromHexCenter, y: frame.height - paddingTopFromHexCenter)
+        
+        woolButton.center = CGPoint(x: frame.width - sidePaddingFromHexCenter, y: frame.height - paddingTopFromHexCenter)
+        
+        self.addSubview(woodButton)
+        self.addSubview(brickButton)
+        self.addSubview(grainButton)
+        self.addSubview(oreButton)
+        self.addSubview(woolButton)
     }
-    */
 
 }
