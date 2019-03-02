@@ -10,6 +10,8 @@ import UIKit
 
 class ProbabilityView: ContentView {
     
+    var eraser:UIButton!
+    
     var woodButton = HexButton(type: .wood)
     var oreButton = HexButton(type: .ore)
     var brickButton = HexButton(type: .brick)
@@ -22,6 +24,9 @@ class ProbabilityView: ContentView {
     private var paddingTop = 90
     
     override func setup() {
+        
+        eraser = UIButton(frame: CGRect(x: self.bounds.width - (20 + 35) , y: 20, width: 35, height: 30))
+        eraser.setImage(UIImage(named: "Eraser"), for: .normal)
         
         let hexSize = HexButton.size
         
@@ -59,7 +64,7 @@ class ProbabilityView: ContentView {
         remove.setImage(minus, for: .normal)
         
         
-        
+        self.addSubview(eraser)
         self.addSubview(woodButton)
         self.addSubview(brickButton)
         self.addSubview(grainButton)

@@ -51,7 +51,7 @@ class ProbabilityHeaderView: HeaderView {
         diceIcon.contentMode = .scaleAspectFit
         diceX += diceIcon.bounds.width + 5
         
-        diceProbability = UILabel(frame: CGRect(x: diceX, y: y, width: 80, height: 40))
+        diceProbability = UILabel(frame: CGRect(x: diceX, y: y, width: 90, height: 40))
         diceProbability.font = UIFont.systemFont(ofSize: 32, weight: .light)
         diceProbability.textColor = .white
         
@@ -78,7 +78,7 @@ class ProbabilityHeaderView: HeaderView {
         let textSize = text.size(diceProbability.font)
         let iconWidth = diceIcon.bounds.width
         
-        let horizontalSpace = (UIScreen.main.bounds.width / 2) - 40
+        let horizontalSpace = (self.bounds.width / 2) - 40
         
         let padding = (horizontalSpace - (iconWidth + textSize.width + 5)) / 2
         
@@ -91,9 +91,9 @@ class ProbabilityHeaderView: HeaderView {
         let textSize = text.size(cardAverage.font)
         let iconWidth = cardsIcon.bounds.width
         
-        let horizontalSpace = (self.bounds.width/2) - 40
+        let horizontalSpace = (self.bounds.width / 2) - 40
         
-        let x = (UIScreen.main.bounds.width / 2) + 20
+        let x = (self.bounds.width / 2) + 20
         
         let padding = (horizontalSpace - (iconWidth + textSize.width + 5)) / 2
         

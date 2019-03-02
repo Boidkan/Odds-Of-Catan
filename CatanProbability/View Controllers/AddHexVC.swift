@@ -55,6 +55,7 @@ class AddHexVC: UIViewController {
         guard sender.type != nil else { return }
         
         resourceTypeSelected = sender.type!
+        viewModel.swapHeaderFor(view: header)
         
         UIView.animate(withDuration: 0.3) {
             self.selectHexView.isHidden = true

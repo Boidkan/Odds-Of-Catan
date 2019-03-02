@@ -23,6 +23,7 @@ class ProbabilityVC: UIViewController {
         probabilityViewModel.configure(view: contentView)
         
         contentView.add.addTarget(self, action: #selector(addHex), for: .touchUpInside)
+        contentView.eraser.addTarget(self, action: #selector(clear), for: .touchUpInside)
         
         self.view.addSubview(header)
         self.view.addSubview(contentView)
@@ -39,6 +40,12 @@ class ProbabilityVC: UIViewController {
     
     func add(hex: Hex) {
         probabilityViewModel.add(hex: hex)
+        probabilityViewModel.configure(view: contentView)
+        probabilityViewModel.configure(view: header)
+    }
+    
+    @objc func clear() {
+        probabilityViewModel.clear()
         probabilityViewModel.configure(view: contentView)
         probabilityViewModel.configure(view: header)
     }

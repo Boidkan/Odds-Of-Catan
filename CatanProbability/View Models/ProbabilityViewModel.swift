@@ -16,17 +16,17 @@ class ProbabilityViewModel {
     var grains: [Grain] = []
     var wool: [Wool] = []
     
-    var averageCardsDrawnPerTurn: CGFloat {
+    var averageCardsDrawnPerTurn: String {
         let numerator = wood.reduce(0) { $0 + $1.number.combinations } +
                         ores.reduce(0) { $0 + $1.number.combinations } +
                         bricks.reduce(0) { $0 + $1.number.combinations } +
                         grains.reduce(0) { $0 + $1.number.combinations } +
                         wool.reduce(0) { $0 + $1.number.combinations }
-    
-        return numerator/36
+        let probability = numerator/36 as NSNumber
+        return Formatters.shared.decimalFormatter.string(from: probability) ?? "0"
     }
     
-    var diceProbability: CGFloat {
+    var diceProbability: String {
         var seen: [Number] = []
         
         wood.collectUniqueNumbers(seen: &seen)
@@ -34,8 +34,8 @@ class ProbabilityViewModel {
         bricks.collectUniqueNumbers(seen: &seen)
         grains.collectUniqueNumbers(seen: &seen)
         wool.collectUniqueNumbers(seen: &seen)
-        
-        return seen.reduce(0) { $0 + $1.probability }
+        let probability = seen.reduce(0) { $0 + $1.probability } as NSNumber
+        return (Formatters.shared.decimalFormatter.string(from: probability) ?? "0") + "%"
     }
     
 }
@@ -68,11 +68,18 @@ extension ProbabilityViewModel {
     
     func configure(view: ProbabilityHeaderView) {
 
-        view.setDiceProbability(text: "\(diceProbability)")
+        view.setDiceProbability(text: diceProbability)
         view.diceDetail.text = "chance of getting a number"
         
-        view.setCardAverage(text: "\(averageCardsDrawnPerTurn)")
+        view.setCardAverage(text: averageCardsDrawnPerTurn)
         view.cardAverageDetail.text = "cards on average per turn"
-        
+    }
+    
+    func clear() {
+        wood = []
+        ores = []
+        grains = []
+        wool = []
+        bricks = []
     }
 }

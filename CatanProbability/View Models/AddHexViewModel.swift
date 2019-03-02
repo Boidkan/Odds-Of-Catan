@@ -23,4 +23,14 @@ extension AddHexViewModel {
     func configure(view: AddHexHeaderView) {
         view.instructions.text = "Select a resource to add."
     }
+    
+    func swapHeaderFor(view: AddHexHeaderView) {
+        
+        if view.instructions.text == "Select a resource to add." {
+            view.instructions.text = "What number does it have?"
+        }else{
+           view.instructions.text = "Select a resource to add."
+        }
+        
+    }
 }
