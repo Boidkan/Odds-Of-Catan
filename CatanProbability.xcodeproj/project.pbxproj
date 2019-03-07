@@ -39,6 +39,7 @@
 		2E54287922278EAA00E352C5 /* Grain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287822278EAA00E352C5 /* Grain.swift */; };
 		2E54287B22278EC400E352C5 /* Wool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287A22278EC400E352C5 /* Wool.swift */; };
 		2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287E2227ABD100E352C5 /* Formatters.swift */; };
+		2EB9B08C2230D68100260A2F /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9B08B2230D68100260A2F /* BackButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +98,7 @@
 		2E54287822278EAA00E352C5 /* Grain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grain.swift; sourceTree = "<group>"; };
 		2E54287A22278EC400E352C5 /* Wool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wool.swift; sourceTree = "<group>"; };
 		2E54287E2227ABD100E352C5 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		2EB9B08B2230D68100260A2F /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -224,6 +226,7 @@
 				2E5428642225FAA200E352C5 /* HexButton.swift */,
 				2E25F1002229C1F400CA3503 /* HeaderView.swift */,
 				2E25F1182229F93700CA3503 /* DiceButton.swift */,
+				2EB9B08B2230D68100260A2F /* BackButton.swift */,
 				2E25F10D2229CAE400CA3503 /* ContentView.swift */,
 				2E25F1032229C3EF00CA3503 /* ProbabilityViews */,
 				2E25F1062229C7A500CA3503 /* Add Hex */,
@@ -407,6 +410,7 @@
 				2E25F11C222A022E00CA3503 /* ColorPalette.swift in Sources */,
 				2E54286D2227860400E352C5 /* Number.swift in Sources */,
 				2E25F1152229E81100CA3503 /* SelectDiceValueView.swift in Sources */,
+				2EB9B08C2230D68100260A2F /* BackButton.swift in Sources */,
 				2E35FE782217AB4D0022E096 /* CatanProbability.xcdatamodeld in Sources */,
 				2E35FEA42217B53C0022E096 /* Hex.swift in Sources */,
 				2E25F0FF2229AB8100CA3503 /* StringExtension.swift in Sources */,

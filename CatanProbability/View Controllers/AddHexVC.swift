@@ -45,8 +45,9 @@ class AddHexVC: UIViewController {
         selectDiceValueView.elevenDice.addTarget(self, action: #selector(selectedNumber(sender:)), for: .touchUpInside)
         selectDiceValueView.twelveDice.addTarget(self, action: #selector(selectedNumber(sender:)), for: .touchUpInside)
         
-        selectHexView.cancelButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
-        selectDiceValueView.cancelButton.addTarget(self, action: #selector(dismissSelectDiceValueView), for: .touchUpInside)
+        selectHexView.cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+        selectDiceValueView.cancelButton.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+        selectDiceValueView.backButton.addTarget(self, action: #selector(back), for: .touchUpInside)
         
         contentHolder.frame = self.view.bounds
         contentHolder.backgroundColor = .clear
@@ -100,12 +101,12 @@ class AddHexVC: UIViewController {
         
     }
     
-    @objc func dismissView() {
+    @objc func cancel() {
+        resourceTypeSelected = nil
         self.dismiss(animated: false, completion: nil)
     }
     
-    @objc func dismissSelectDiceValueView() {
-        
+    @objc func back() {
         resourceTypeSelected = nil
         viewModel.swapHeaderFor(view: header)
         flip()

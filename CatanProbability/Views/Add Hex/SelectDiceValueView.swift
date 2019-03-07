@@ -11,6 +11,7 @@ import UIKit
 class SelectDiceValueView: ContentView {
     
     var cancelButton:UIButton!
+    var backButton = BackButton()
 
     var twoDice = DiceButton(type: .two)
     var threeDice = DiceButton(type: .three)
@@ -67,6 +68,9 @@ class SelectDiceValueView: ContentView {
         cancelButton = UIButton(frame: CGRect(x: frame.width - 55, y: 20, width: 35, height: 30))
         cancelButton.setImage(UIImage(named: "Cancel"), for: .normal)
         
+        backButton.frame.origin = CGPoint(x: 20, y: 20)
+        
+        self.addSubview(backButton)
         self.addSubview(cancelButton)
         self.addSubview(twoDice)
         self.addSubview(threeDice)
