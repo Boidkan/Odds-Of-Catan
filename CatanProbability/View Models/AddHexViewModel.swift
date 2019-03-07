@@ -6,14 +6,9 @@
 //  Copyright © 2019 Eric Collom. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class AddHexViewModel {
-    
-    
-    
-    
-}
+class AddHexViewModel { }
 
 extension AddHexViewModel {
     
@@ -25,12 +20,10 @@ extension AddHexViewModel {
     }
     
     func swapHeaderFor(view: AddHexHeaderView) {
-        
         if view.instructions.text == "Select a resource to add." {
             view.instructions.text = "What number does it have?"
         }else{
            view.instructions.text = "Select a resource to add."
         }
-        
     }
 }

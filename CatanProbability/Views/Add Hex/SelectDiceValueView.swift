@@ -9,6 +9,8 @@
 import UIKit
 
 class SelectDiceValueView: ContentView {
+    
+    var cancelButton:UIButton!
 
     var twoDice = DiceButton(type: .two)
     var threeDice = DiceButton(type: .three)
@@ -29,7 +31,7 @@ class SelectDiceValueView: ContentView {
         let padding = extraSpace/5
         
         var centerX = padding + (width / 2)
-        var centerY:CGFloat = 100
+        var centerY:CGFloat = 170
         
         twoDice.center = CGPoint(x: centerX, y: centerY)
         centerX += width + padding
@@ -62,6 +64,10 @@ class SelectDiceValueView: ContentView {
         twelveDice.center = CGPoint(x: centerX, y: centerY)
         centerX += width + padding
         
+        cancelButton = UIButton(frame: CGRect(x: frame.width - 55, y: 20, width: 35, height: 30))
+        cancelButton.setImage(UIImage(named: "Cancel"), for: .normal)
+        
+        self.addSubview(cancelButton)
         self.addSubview(twoDice)
         self.addSubview(threeDice)
         self.addSubview(fourDice)

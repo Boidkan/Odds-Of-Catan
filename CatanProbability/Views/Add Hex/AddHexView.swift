@@ -9,6 +9,8 @@
 import UIKit
 
 class AddHexView: ContentView {
+    
+    var cancelButton:UIButton!
 
     var woodButton = HexButton(type: .wood, iconOnly: true)
     var oreButton = HexButton(type: .ore, iconOnly: true)
@@ -40,6 +42,10 @@ class AddHexView: ContentView {
         
         woolButton.center = CGPoint(x: frame.width - sidePaddingFromHexCenter, y: frame.height - paddingTopFromHexCenter)
         
+        cancelButton = UIButton(frame: CGRect(x: frame.width - 55, y: 20, width: 35, height: 30))
+        cancelButton.setImage(UIImage(named: "Cancel"), for: .normal)
+        
+        self.addSubview(cancelButton)
         self.addSubview(woodButton)
         self.addSubview(brickButton)
         self.addSubview(grainButton)

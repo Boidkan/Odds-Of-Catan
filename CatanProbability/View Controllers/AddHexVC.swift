@@ -10,19 +10,19 @@ import UIKit
 
 class AddHexVC: UIViewController {
     
+    var contentHolder = UIView()
     var header = AddHexHeaderView()
     var selectHexView = AddHexView()
     var selectDiceValueView = SelectDiceValueView()
     var viewModel = AddHexViewModel()
     
     private var resourceTypeSelected:ResourceType?
+    private var isFlipped = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor.lightGray
-        
-        selectDiceValueView.isHidden = true
         
         viewModel.configure(view: header)
         viewModel.configure(view: selectHexView)
@@ -44,10 +44,18 @@ class AddHexVC: UIViewController {
         selectDiceValueView.tenDice.addTarget(self, action: #selector(selectedNumber(sender:)), for: .touchUpInside)
         selectDiceValueView.elevenDice.addTarget(self, action: #selector(selectedNumber(sender:)), for: .touchUpInside)
         selectDiceValueView.twelveDice.addTarget(self, action: #selector(selectedNumber(sender:)), for: .touchUpInside)
+        
+        selectHexView.cancelButton.addTarget(self, action: #selector(dismissView), for: .touchUpInside)
+        selectDiceValueView.cancelButton.addTarget(self, action: #selector(dismissSelectDiceValueView), for: .touchUpInside)
+        
+        contentHolder.frame = self.view.bounds
+        contentHolder.backgroundColor = .clear
 
         self.view.addSubview(header)
-        self.view.addSubview(selectHexView)
-        self.view.addSubview(selectDiceValueView)
+        self.view.addSubview(contentHolder)
+        self.contentHolder.addSubview(selectDiceValueView)
+        self.contentHolder.addSubview(selectHexView)
+        
     }
     
     @objc func selectedHex(sender: HexButton) {
@@ -57,10 +65,7 @@ class AddHexVC: UIViewController {
         resourceTypeSelected = sender.type!
         viewModel.swapHeaderFor(view: header)
         
-        UIView.animate(withDuration: 0.3) {
-            self.selectHexView.isHidden = true
-            self.selectDiceValueView.isHidden = false
-        }
+        flip()
     }
     
     @objc func selectedNumber(sender button: DiceButton) {
@@ -93,6 +98,28 @@ class AddHexVC: UIViewController {
             }
         }
         
+    }
+    
+    @objc func dismissView() {
+        self.dismiss(animated: false, completion: nil)
+    }
+    
+    @objc func dismissSelectDiceValueView() {
+        
+        resourceTypeSelected = nil
+        viewModel.swapHeaderFor(view: header)
+        flip()
+    }
+    
+    func flip() {
+        isFlipped = !isFlipped
+        
+        let viewToFlip = !isFlipped ? selectDiceValueView : selectHexView
+        let bottomView = !isFlipped ? selectHexView : selectDiceValueView
+        
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews, .curveEaseInOut]
+        
+        UIView.transition(from: viewToFlip, to: bottomView, duration: 0.5, options: transitionOptions, completion: nil)
     }
 
 }

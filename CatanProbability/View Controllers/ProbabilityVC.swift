@@ -29,10 +29,6 @@ class ProbabilityVC: UIViewController {
         self.view.addSubview(contentView)
         
     }
-
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return UIStatusBarStyle.lightContent
-    }
     
     @objc func addHex() {
         self.performSegue(withIdentifier: "addHex", sender: nil)
