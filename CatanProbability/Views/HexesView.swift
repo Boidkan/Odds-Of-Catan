@@ -16,14 +16,16 @@ class HexesView: ContentView {
     private(set) var woolButton = HexButton(type: .wool)
     private(set) var grainButton = HexButton(type: .grain)
     
-    convenience init(iconOnly: Bool) {
-        self.init()
-
-        woodButton.hideLabel()
-        oreButton.hideLabel()
-        brickButton.hideLabel()
-        woolButton.hideLabel()
-        grainButton.hideLabel()
+    var hexes:[HexButton] {
+        get {
+            return [
+                woodButton,
+                oreButton,
+                brickButton,
+                woolButton,
+                grainButton
+            ]
+        }
     }
     
     override func setup() {
@@ -57,5 +59,4 @@ class HexesView: ContentView {
         self.addSubview(woolButton)
         
     }
-
 }

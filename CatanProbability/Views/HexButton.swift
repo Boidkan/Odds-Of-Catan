@@ -61,11 +61,3 @@ class HexButton: UIButton {
         self.setImage(type.background, for: .normal)
     }
 }
-
-extension HexButton {
-    func hideLabel() {
-        icon.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 80))
-        icon.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
-        probability?.isHidden = true
-    }
-}

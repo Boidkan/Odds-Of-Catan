@@ -41,6 +41,7 @@
 		2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287E2227ABD100E352C5 /* Formatters.swift */; };
 		2EB9B08C2230D68100260A2F /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9B08B2230D68100260A2F /* BackButton.swift */; };
 		2EB9B09422347F9900260A2F /* HexesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9B09322347F9900260A2F /* HexesView.swift */; };
+		2EBC74A52234957C0093862E /* HexIconsAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EBC74A42234957C0093862E /* HexIconsAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		2E54287E2227ABD100E352C5 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		2EB9B08B2230D68100260A2F /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
 		2EB9B09322347F9900260A2F /* HexesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexesView.swift; sourceTree = "<group>"; };
+		2EBC74A42234957C0093862E /* HexIconsAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexIconsAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,6 +266,7 @@
 			children = (
 				2E54287E2227ABD100E352C5 /* Formatters.swift */,
 				2E25F11B222A022E00CA3503 /* ColorPalette.swift */,
+				2EBC74A42234957C0093862E /* HexIconsAnimator.swift */,
 				2E25F11D222A0C9800CA3503 /* VCHierarchy.swift */,
 				2E25F0FE2229AB8100CA3503 /* StringExtension.swift */,
 			);
@@ -430,6 +433,7 @@
 				2E25F11E222A0C9800CA3503 /* VCHierarchy.swift in Sources */,
 				2E54287322278E7500E352C5 /* Wood.swift in Sources */,
 				2E54287922278EAA00E352C5 /* Grain.swift in Sources */,
+				2EBC74A52234957C0093862E /* HexIconsAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

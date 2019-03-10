@@ -12,7 +12,7 @@ class AddHexVC: UIViewController {
     
     var contentHolder = UIView()
     var header = AddHexHeaderView()
-    var selectHexView = AddHexView(iconOnly: true)
+    var selectHexView = AddHexView()
     var selectDiceValueView = SelectDiceValueView()
     var viewModel = AddHexViewModel()
     
@@ -93,6 +93,7 @@ class AddHexVC: UIViewController {
             hex = Grain(number: number)
         }
         
+        
         self.dismiss(animated: false) {
             if let vc = VCHierarchy.topMostContoller() as? ProbabilityVC {
                 vc.add(hex: hex)
@@ -103,7 +104,7 @@ class AddHexVC: UIViewController {
     
     @objc func cancel() {
         resourceTypeSelected = nil
-        self.dismiss(animated: false, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func back() {

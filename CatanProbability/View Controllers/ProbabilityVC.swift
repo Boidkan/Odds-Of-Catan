@@ -13,6 +13,8 @@ class ProbabilityVC: UIViewController {
     var probabilityViewModel = ProbabilityViewModel()
     var contentView = ProbabilityView()
     var header = ProbabilityHeaderView()
+    
+    let transition = HexIconsAnimator()
 
     override func viewDidLoad() {
         
@@ -31,7 +33,9 @@ class ProbabilityVC: UIViewController {
     }
     
     @objc func addHex() {
-        self.performSegue(withIdentifier: "addHex", sender: nil)
+        let vc = AddHexVC()
+        vc.transitioningDelegate = self
+        self.present(vc, animated: true, completion: nil)
     }
     
     func add(hex: Hex) {
@@ -47,3 +51,16 @@ class ProbabilityVC: UIViewController {
     }
 }
 
+extension ProbabilityVC: UIViewControllerTransitioningDelegate {
+    
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = true
+        return transition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        transition.presenting = false
+        return transition
+    }
+
+}
