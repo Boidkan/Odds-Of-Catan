@@ -22,6 +22,8 @@ class AddHexVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        header.instructions.alpha = 0
+        
         self.view.backgroundColor = UIColor.lightGray
         
         viewModel.configure(view: header)
@@ -94,7 +96,7 @@ class AddHexVC: UIViewController {
         }
         
         
-        self.dismiss(animated: false) {
+        self.dismiss(animated: true) {
             if let vc = VCHierarchy.topMostContoller() as? ProbabilityVC {
                 vc.add(hex: hex)
             }

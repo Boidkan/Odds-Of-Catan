@@ -21,6 +21,15 @@ class ProbabilityVC: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.lightGray
         
+        transition.dismissCompletion = {
+            UIView.animate(withDuration: 0.15) {
+                self.contentView.add.alpha = 1
+                self.contentView.remove.alpha = 1
+                self.contentView.eraser.alpha = 1
+                self.header.setAlpha(to: 1)
+            }
+        }
+        
         probabilityViewModel.configure(view: header)
         probabilityViewModel.configure(view: contentView)
         
@@ -35,7 +44,15 @@ class ProbabilityVC: UIViewController {
     @objc func addHex() {
         let vc = AddHexVC()
         vc.transitioningDelegate = self
-        self.present(vc, animated: true, completion: nil)
+        UIView.animate(withDuration: 0.15, animations: {
+            self.contentView.add.alpha = 0
+            self.contentView.remove.alpha = 0
+            self.contentView.eraser.alpha = 0
+            self.header.setAlpha(to: 0)
+        }, completion: { _ in
+            self.present(vc, animated: true, completion: nil)
+        })
+        
     }
     
     func add(hex: Hex) {

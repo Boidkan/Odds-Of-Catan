@@ -101,5 +101,14 @@ class ProbabilityHeaderView: HeaderView {
         cardAverage.frame.origin = CGPoint(x: x + padding + cardsIcon.bounds.width + 5, y: 70)
         cardAverage.text = text
     }
+    
+    func setAlpha(to alpha: CGFloat) {
+        diceIcon.alpha = alpha
+        cardsIcon.alpha = alpha
+        diceProbability.alpha = alpha
+        diceDetail.alpha = alpha
+        cardAverage.alpha = alpha
+        cardAverageDetail.alpha = alpha
+    }
 
 }
