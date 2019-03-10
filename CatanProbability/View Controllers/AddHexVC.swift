@@ -22,6 +22,8 @@ class AddHexVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        selectHexView.hexes.forEach { $0.hideLabel() }
+        
         header.instructions.alpha = 0
         
         self.view.backgroundColor = UIColor.lightGray

@@ -10,15 +10,13 @@ import UIKit
 
 class HexIconsAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    var duration:Double = 0.2
+    var duration:Double = 0.15
     var presenting = true
-    
-    var dismissCompletion: (()->Void)?
     
     func transitionDuration(using transitionContext: UIViewControllerContextTransitioning?) -> TimeInterval {
         return 0
     }
-    
+
     func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
         
         let containerView = transitionContext.containerView
@@ -27,8 +25,10 @@ class HexIconsAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let fromVC = transitionContext.viewController(forKey: .from)!
         
         let probVC = (presenting ? fromVC : toVC) as! ProbabilityVC
-        let vc = (presenting ? toVC : fromVC) as! AddHexVC
-        let view = vc.view!
+        let hexVC = (presenting ? toVC : fromVC) as! AddHexVC
+
+        let endView = presenting ? hexVC.view! : probVC.view!
+        let startView = presenting ? probVC.view! : hexVC.view!
         
         let size = HexButton.size
         
@@ -40,31 +40,70 @@ class HexIconsAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         
         let frame = presenting ? finalFrame : initialFrame
         let center = presenting ? finalCenter : initialCenter
-        let iconAlpha: CGFloat = presenting ? 0 : 1
-        let headerAlpha: CGFloat = presenting ? 1 : 0
         
-        if !containerView.subviews.contains(probVC.view) {
-            containerView.addSubview(probVC.view!)
-        }
+        let probAlpha: CGFloat = presenting ? 0 : 1
+        let hexAlpha: CGFloat = presenting ? 1 : 0
         
-        containerView.addSubview(view)
-        containerView.bringSubviewToFront(view)
-    
-        UIView.animate(withDuration: duration, animations: {
-            vc.selectHexView.hexes.forEach {
+        containerView.addSubview(startView)
+        containerView.bringSubviewToFront(startView)
+        
+        func probAnimation() {
+            probVC.contentView.hexes.forEach {
                 $0.icon.frame = frame
                 $0.icon.center = center
-                $0.probability?.alpha = iconAlpha
+                $0.probability?.alpha = probAlpha
             }
+        }
+        
+        func probButtonAnimation() {
+            probVC.contentView.add.alpha = probAlpha
+            probVC.contentView.remove.alpha = probAlpha
+            probVC.contentView.eraser.alpha = probAlpha
+            probVC.header.setAlpha(to: probAlpha)
+        }
+        
+        func addHexAnimation() {
+            hexVC.selectHexView.hexes.forEach {
+                $0.icon.frame = frame
+                $0.icon.center = center
+                $0.probability?.alpha = probAlpha
+                hexVC.selectHexView.cancelButton.alpha = hexAlpha
+                hexVC.header.instructions.alpha = hexAlpha
+            }
+        }
+        
+        func hexButtonsAnimation() {
+            hexVC.header.instructions.alpha = hexAlpha
+            hexVC.selectHexView.cancelButton.alpha = hexAlpha
+        }
+        
+        UIView.animate(withDuration: duration, animations: {
             
-            vc.header.instructions.alpha = headerAlpha
-            vc.selectHexView.cancelButton.alpha = headerAlpha
+            probAnimation()
+            addHexAnimation()
+            
+            if self.presenting {
+                probButtonAnimation()
+            }else{
+                hexButtonsAnimation()
+            }
             
         }, completion: { _ in
-            if !self.presenting {
-                self.dismissCompletion?()
-            }
-            transitionContext.completeTransition(true)
+            
+            containerView.addSubview(endView)
+            containerView.bringSubviewToFront(endView)
+            
+            UIView.animate(withDuration: 0.15, animations: {
+                if !self.presenting {
+                    probButtonAnimation()
+                }else{
+                    hexButtonsAnimation()
+                }
+            }, completion: { _ in
+                transitionContext.completeTransition(true)
+            })
+            
+            
         })
     }
 }
