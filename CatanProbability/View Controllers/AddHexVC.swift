@@ -12,7 +12,7 @@ class AddHexVC: UIViewController {
     
     var contentHolder = UIView()
     var header = AddHexHeaderView()
-    var selectHexView = AddHexView()
+    var selectHexView = AddHexView(iconOnly: true)
     var selectDiceValueView = SelectDiceValueView()
     var viewModel = AddHexViewModel()
     

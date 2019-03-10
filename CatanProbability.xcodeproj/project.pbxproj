@@ -40,6 +40,7 @@
 		2E54287B22278EC400E352C5 /* Wool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287A22278EC400E352C5 /* Wool.swift */; };
 		2E54287F2227ABD100E352C5 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E54287E2227ABD100E352C5 /* Formatters.swift */; };
 		2EB9B08C2230D68100260A2F /* BackButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9B08B2230D68100260A2F /* BackButton.swift */; };
+		2EB9B09422347F9900260A2F /* HexesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EB9B09322347F9900260A2F /* HexesView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +100,7 @@
 		2E54287A22278EC400E352C5 /* Wool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wool.swift; sourceTree = "<group>"; };
 		2E54287E2227ABD100E352C5 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
 		2EB9B08B2230D68100260A2F /* BackButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackButton.swift; sourceTree = "<group>"; };
+		2EB9B09322347F9900260A2F /* HexesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HexesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -228,6 +230,7 @@
 				2E25F1182229F93700CA3503 /* DiceButton.swift */,
 				2EB9B08B2230D68100260A2F /* BackButton.swift */,
 				2E25F10D2229CAE400CA3503 /* ContentView.swift */,
+				2EB9B09322347F9900260A2F /* HexesView.swift */,
 				2E25F1032229C3EF00CA3503 /* ProbabilityViews */,
 				2E25F1062229C7A500CA3503 /* Add Hex */,
 			);
@@ -407,6 +410,7 @@
 				2E25F1192229F93800CA3503 /* DiceButton.swift in Sources */,
 				2E54287522278E8900E352C5 /* Ore.swift in Sources */,
 				2E54287B22278EC400E352C5 /* Wool.swift in Sources */,
+				2EB9B09422347F9900260A2F /* HexesView.swift in Sources */,
 				2E25F11C222A022E00CA3503 /* ColorPalette.swift in Sources */,
 				2E54286D2227860400E352C5 /* Number.swift in Sources */,
 				2E25F1152229E81100CA3503 /* SelectDiceValueView.swift in Sources */,
