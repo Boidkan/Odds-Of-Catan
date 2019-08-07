@@ -15,6 +15,7 @@ protocol Content {
 class ContentView: UIView {
     
     convenience init() {
+        
         let bounds = UIScreen.main.bounds
         let frame = CGRect(x: 10, y: 180, width: bounds.width - 20, height: bounds.height -  200)
         self.init(frame: frame)
