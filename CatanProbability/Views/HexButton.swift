@@ -14,12 +14,68 @@ class HexButton: UIButton {
     var probability: UILabel?
     var type: ResourceType?
     
+    class var frame: CGRect {
+        return CGRect(origin: .zero, size: size)
+    }
+    
     class var size: CGSize {
-        get {
-            
-            return CGSize(width: 130, height: 151)
+        return CGSize(width: width, height: height)
+    }
+    
+    class var center: CGPoint {
+        
+        if UIScreen.main.bounds.width <= 375 {
+            return CGPoint(x: width / 2, y: (height / 2) - 20)
+        }
+        
+        return CGPoint(x: width / 2, y: height / 2)
+    }
+    
+    class var width: CGFloat {
+        if UIScreen.main.bounds.width <= 375 {
+            return 80
+        }else{
+            return 130
         }
     }
+    
+    class var height: CGFloat {
+        if UIScreen.main.bounds.width <= 375 {
+            return 92
+        }else{
+            return 150
+        }
+    }
+    
+    class func iconFrame(isIconOnly: Bool = true) -> CGRect {
+        return CGRect(origin: .zero, size: iconSize(isIconOnly: isIconOnly))
+    }
+    
+    class func iconSize(isIconOnly: Bool) -> CGSize {
+        return CGSize(width: iconWidth(isIconOnly: isIconOnly), height: iconHeight(isIconOnly: isIconOnly))
+    }
+    
+    class func iconWidth(isIconOnly: Bool) -> CGFloat {
+        return isIconOnly ? width / iconLargeWidthRatio : width / iconSmallWidthRatio
+    }
+    
+    class func iconHeight(isIconOnly: Bool) -> CGFloat {
+        return isIconOnly ? height / iconLargeHeightRatio : height / iconSmallHeightRatio
+    }
+    
+    static let iconLargeWidthRatio: CGFloat = 130 / 80
+    static let iconLargeHeightRatio: CGFloat = 150 / 80
+    
+    static let iconSmallWidthRatio: CGFloat = 130 / 60
+    static let iconSmallHeightRatio: CGFloat = 150 / 60
+    
+    class var labelFrame: CGRect {
+        let y = height / (150 / 90)
+        return CGRect(x: 5, y: y, width: width - 10, height: 30)
+    }
+    
+    
+    
     
     convenience init(type:ResourceType, iconOnly: Bool) {
         self.init(iconOnly: iconOnly)
@@ -33,22 +89,15 @@ class HexButton: UIButton {
     
     private convenience init(iconOnly: Bool) {
         
-        let frame = CGRect(origin: .zero, size: HexButton.size)
-        self.init(frame: frame)
-        
-        probability = UILabel(frame: CGRect(x: 5, y: 90, width: 125, height: 30))
+        self.init(frame: HexButton.frame)
+        probability = UILabel(frame: HexButton.labelFrame)
         probability?.font = UIFont.systemFont(ofSize: 24)
         probability?.textAlignment = .center
         probability?.textColor = .white
         
-        if iconOnly {
-            icon = UIImageView(frame: CGRect(origin: .zero, size: CGSize(width: 80, height: 80)))
-            icon.center = self.center
-            probability?.alpha = 0
-        }else{
-            icon = UIImageView(frame:CGRect(origin: .zero, size: CGSize(width: 60, height: 60)))
-            icon.center = CGPoint(x: self.bounds.width / 2, y: (self.bounds.height / 2) - 20)
-        }
+        icon = UIImageView(frame: HexButton.iconFrame(isIconOnly: iconOnly))
+        icon.center = HexButton.center
+        probability?.alpha = CGFloat(truncating: NSNumber(value: !iconOnly))
         
         icon.contentMode = .scaleAspectFit
         self.addSubview(icon)
@@ -62,8 +111,7 @@ class HexButton: UIButton {
     }
     
     func hideLabel() {
-        icon.frame = CGRect(origin: .zero, size: CGSize(width: 80, height: 80))
-        icon.center = CGPoint(x: self.bounds.width / 2, y: self.bounds.height / 2)
+        icon.frame = HexButton.iconFrame()
         probability?.alpha = 0
     }
 }
