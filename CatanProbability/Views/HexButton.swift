@@ -22,12 +22,15 @@ class HexButton: UIButton {
         return CGSize(width: width, height: height)
     }
     
-    class var center: CGPoint {
-        
-        if UIScreen.main.bounds.width <= 375 {
-            return CGPoint(x: width / 2, y: (height / 2) - 20)
-        }
-        
+    class func center(isIconOnly: Bool) -> CGPoint {
+        return isIconOnly ? finalCenter : initialCenter
+    }
+    
+    class var initialCenter: CGPoint {
+        return CGPoint(x: width / 2, y: (height / 2) - 20)
+    }
+    
+    class var finalCenter: CGPoint {
         return CGPoint(x: width / 2, y: height / 2)
     }
     
@@ -48,7 +51,7 @@ class HexButton: UIButton {
     }
     
     class func iconFrame(isIconOnly: Bool = true) -> CGRect {
-        return CGRect(origin: .zero, size: iconSize(isIconOnly: isIconOnly))
+        return CGRect(origin: center(isIconOnly: isIconOnly), size: iconSize(isIconOnly: isIconOnly))
     }
     
     class func iconSize(isIconOnly: Bool) -> CGSize {
@@ -61,6 +64,11 @@ class HexButton: UIButton {
     
     class func iconHeight(isIconOnly: Bool) -> CGFloat {
         return isIconOnly ? height / iconLargeHeightRatio : height / iconSmallHeightRatio
+    }
+    
+    class var font: UIFont {
+        let isSmall = UIScreen.main.bounds.width <= 375
+        return UIFont.systemFont(ofSize: isSmall ? 16 : 24)
     }
     
     static let iconLargeWidthRatio: CGFloat = 130 / 80
@@ -91,12 +99,12 @@ class HexButton: UIButton {
         
         self.init(frame: HexButton.frame)
         probability = UILabel(frame: HexButton.labelFrame)
-        probability?.font = UIFont.systemFont(ofSize: 24)
+        probability?.font = HexButton.font
         probability?.textAlignment = .center
         probability?.textColor = .white
         
         icon = UIImageView(frame: HexButton.iconFrame(isIconOnly: iconOnly))
-        icon.center = HexButton.center
+        icon.center = HexButton.center(isIconOnly: iconOnly)
         probability?.alpha = CGFloat(truncating: NSNumber(value: !iconOnly))
         
         icon.contentMode = .scaleAspectFit

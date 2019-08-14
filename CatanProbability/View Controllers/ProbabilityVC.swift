@@ -54,12 +54,12 @@ class ProbabilityVC: UIViewController {
 extension ProbabilityVC: UIViewControllerTransitioningDelegate {
     
     func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.presenting = true
+        transition.isPresenting = true
         return transition
     }
     
     func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        transition.presenting = false
+        transition.isPresenting = false
         return transition
     }
 

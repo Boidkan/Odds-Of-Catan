@@ -123,7 +123,9 @@ class AddHexVC: UIViewController {
         let viewToFlip = !isFlipped ? selectDiceValueView : selectHexView
         let bottomView = !isFlipped ? selectHexView : selectDiceValueView
         
-        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight, .showHideTransitionViews, .curveEaseInOut]
+        let transitionOptions: UIView.AnimationOptions = [.transitionFlipFromRight,
+                                                          .showHideTransitionViews,
+                                                          .curveEaseInOut]
         
         UIView.transition(from: viewToFlip, to: bottomView, duration: 0.5, options: transitionOptions, completion: nil)
     }
