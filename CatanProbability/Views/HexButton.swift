@@ -35,15 +35,19 @@ class HexButton: UIButton {
     }
     
     class var width: CGFloat {
-        if UIScreen.main.bounds.width <= 375 {
+        if isSmallerScreen {
             return 80
         }else{
             return 130
         }
     }
     
+    class var isSmallerScreen: Bool {
+        return UIScreen.main.bounds.width <= 375 && UIScreen.main.bounds.height < 667
+    }
+    
     class var height: CGFloat {
-        if UIScreen.main.bounds.width <= 375 {
+        if isSmallerScreen {
             return 92
         }else{
             return 150
@@ -67,8 +71,7 @@ class HexButton: UIButton {
     }
     
     class var font: UIFont {
-        let isSmall = UIScreen.main.bounds.width <= 375
-        return UIFont.systemFont(ofSize: isSmall ? 16 : 24)
+        return UIFont.systemFont(ofSize: isSmallerScreen ? 16 : 24)
     }
     
     static let iconLargeWidthRatio: CGFloat = 130 / 80
@@ -78,12 +81,9 @@ class HexButton: UIButton {
     static let iconSmallHeightRatio: CGFloat = 150 / 60
     
     class var labelFrame: CGRect {
-        let y = height / (150 / 90)
+        let y = height / (155 / 90)
         return CGRect(x: 5, y: y, width: width - 10, height: 30)
     }
-    
-    
-    
     
     convenience init(type:ResourceType, iconOnly: Bool) {
         self.init(iconOnly: iconOnly)
